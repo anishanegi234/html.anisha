@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHTML Example: Dynamic Dropdown Menu</title>
+    <style>
+        #content {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+    <script>
+        function updateContent() {
+            const dropdown = document.getElementById('options');
+            const content = document.getElementById('content');
+            const selectedOption = dropdown.value;
+
+            if (selectedOption === 'option1') {
+                content.innerHTML = '<h2>Option 1 Selected</h2><p>This is the content for Option 1.</p>';
+            } else if (selectedOption === 'option2') {
+                content.innerHTML = '<h2>Option 2 Selected</h2><p>This is the content for Option 2.</p>';
+            } else if (selectedOption === 'option3') {
+                content.innerHTML = '<h2>Option 3 Selected</h2><p>This is the content for Option 3.</p>';
+            } else {
+                content.innerHTML = '<h2>Please select an option.</h2>';
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>DHTML Example: Dynamic Dropdown Menu</h1>
+    <select id="options" onchange="updateContent()">
+        <option value="">Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+
+    <div id="content">
+        <h2>Please select an option.</h2>
+    </div>
+
+</body>
+</html>

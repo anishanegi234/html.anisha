@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHTML Example: Dynamic Table</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            margin: 10px 0;
+        }
+    </style>
+    <script>
+        function addRow() {
+            const table = document.getElementById('dynamicTable');
+            const row = table.insertRow();
+            const cell1 = row.insertCell(0);
+            const cell2 = row.insertCell(1);
+            const cell3 = row.insertCell(2);
+            
+            cell1.innerHTML = `<input type="text" placeholder="Name">`;
+            cell2.innerHTML = `<input type="text" placeholder="Age">`;
+            cell3.innerHTML = `<button onclick="removeRow(this)">Remove</button>`;
+        }
+
+        function removeRow(button) {
+            const row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+    </script>
+</head>
+<body>
+
+    <h1>DHTML Example: Dynamic Table with Add/Remove Rows</h1>
+    <button onclick="addRow()">Add Row</button>
+    <table id="dynamicTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamic rows will be added here -->
+        </tbody>
+    </table>
+
+</body>
+</html>

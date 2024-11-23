@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with Specific Column Widths and Heights</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        /* Specific column widths */
+        .name-column {
+            width: 30%; /* 30% of the table width */
+        }
+        .age-column {
+            width: 10%; /* 10% of the table width */
+        }
+        .address-column {
+            width: 40%; /* 40% of the table width */
+        }
+        .gender-column {
+            width: 10%; /* 10% of the table width */
+        }
+        .class-column {
+            width: 10%; /* 10% of the table width */
+        }
+        /* Specific row heights */
+        tr {
+            height: 50px; /* 50px height for each row */
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Details</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th class="name-column">Name</th>
+                <th class="age-column">Age</th>
+                <th class="address-column">Address</th>
+                <th class="gender-column">Gender</th>
+                <th class="class-column">Class</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Kavita </td>
+                <td>18</td>
+                <td>pithoragarh</td>
+                <td>feMale</td>
+                <td>bca2 year</td>
+            </tr>
+            <tr>
+                <td>Anisha</td>
+                <td>18</td>
+                <td>dewalthal</td>
+                <td>Female</td>
+                <td>bca2 year</td>
+            </tr>
+            <tr>
+                <td>kundan</td>
+                <td>17</td>
+                <td>dewalthal</td>
+                <td>Male</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>Bhupi</td>
+                <td>17</td>
+                <td>dewalthal</td>
+                <td>male</td>
+                <td>17</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

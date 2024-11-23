@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHTML Example 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: #2980B9;
+            position: absolute; /* Allows movement */
+            top: 50px;
+            left: 50px;
+            transition: all 0.5s ease; /* Smooth transition for movement */
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function moveBox() {
+            // Get the box element
+            var box = document.getElementById('box');
+            // Randomly generate new top and left values within the viewport
+            var newTop = Math.floor(Math.random() * (window.innerHeight - 100)); // -100 to avoid overflow
+            var newLeft = Math.floor(Math.random() * (window.innerWidth - 100)); // -100 to avoid overflow
+
+            // Set new position
+            box.style.top = newTop + 'px';
+            box.style.left = newLeft + 'px';
+        }
+    </script>
+</head>
+<body>
+    <h1>DHTML Example 2: Move the Box!</h1>
+    <div id="box"></div>
+    <button onclick="moveBox()">Move the Box</button>
+</body>
+</html>

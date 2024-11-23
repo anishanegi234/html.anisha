@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHTML Example 5: Countdown Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+        #timer {
+            font-size: 48px;
+            color: #e74c3c;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        var countdown;
+        var timerElement;
+
+        function startTimer(duration) {
+            clearInterval(countdown); // Clear any existing timers
+            var timer = duration, seconds;
+
+            timerElement = document.getElementById('timer');
+            countdown = setInterval(function () {
+                seconds = parseInt(timer % 60, 10);
+                seconds = seconds < 10 ? "0" + seconds : seconds; // Add leading zero if needed
+
+                // Update the timer display
+                timerElement.textContent = seconds;
+
+                // If the timer reaches zero, stop the countdown
+                if (--timer < 0) {
+                    clearInterval(countdown);
+                    timerElement.textContent = "Time's up!";
+                }
+            }, 1000); // Update every second
+        }
+    </script>
+</head>
+<body>
+    <h1>DHTML Example 5: Countdown Timer</h1>
+    <button onclick="startTimer(10)">Start 10-Second Countdown</button>
+    <div id="timer">00</div>
+</body>
+</html>

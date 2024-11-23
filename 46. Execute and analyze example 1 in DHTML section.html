@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHTML Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+        #message {
+            font-size: 24px;
+            color: #2C3E50;
+            margin-top: 20px;
+            display: none; /* Initially hidden */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function showMessage() {
+            // Get the message element
+            var messageElement = document.getElementById('message');
+
+            // Change the display property to make it visible
+            messageElement.style.display = 'block';
+
+            // Change the text color to red
+            messageElement.style.color = 'red';
+        }
+    </script>
+</head>
+<body>
+    <h1>DHTML Example</h1>
+    <button onclick="showMessage()">Click Me!</button>
+    <div id="message">Hello! This is a dynamic message.</div>
+</body>
+</html>

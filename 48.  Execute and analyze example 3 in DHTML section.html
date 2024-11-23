@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHTML Example 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+        #message {
+            font-size: 24px;
+            color: #2C3E50;
+            margin-top: 20px;
+            display: none; /* Initially hidden */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function toggleMessage() {
+            // Get the message element
+            var messageElement = document.getElementById('message');
+            
+            // Check the current display property and toggle it
+            if (messageElement.style.display === 'none') {
+                messageElement.style.display = 'block'; // Show the message
+            } else {
+                messageElement.style.display = 'none'; // Hide the message
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>DHTML Example 3: Toggle Message</h1>
+    <button onclick="toggleMessage()">Toggle Message</button>
+    <div id="message">This is a toggleable message!</div>
+</body>
+</html>

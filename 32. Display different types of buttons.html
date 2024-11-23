@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different Types of Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        button, input[type="submit"], input[type="reset"] {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .primary {
+            background-color: #4CAF50; /* Green */
+            color: white;
+        }
+        .secondary {
+            background-color: #008CBA; /* Blue */
+            color: white;
+        }
+        .danger {
+            background-color: #f44336; /* Red */
+            color: white;
+        }
+        .reset {
+            background-color: #e7e7e7; /* Gray */
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Different Types of Buttons</h1>
+
+    <h2>Standard Button</h2>
+    <button onclick="alert('Standard button clicked!')">Standard Button</button>
+    
+    <h2>Submit Button</h2>
+    <form action="#">
+        <input type="submit" value="Submit Form" class="primary">
+    </form>
+    
+    <h2>Reset Button</h2>
+    <form action="#">
+        <input type="reset" value="Reset Form" class="reset">
+    </form>
+    
+    <h2>Styled Buttons</h2>
+    <button class="primary">Primary Button</button>
+    <button class="secondary">Secondary Button</button>
+    <button class="danger">Danger Button</button>
+    
+    <h2>Disabled Button</h2>
+    <button disabled>Disabled Button</button>
+
+</body>
+</html>

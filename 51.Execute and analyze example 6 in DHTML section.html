@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHTML Example</title>
+    <style>
+        #colorBox {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: background-color 0.5s;
+        }
+    </style>
+    <script>
+        function changeColor() {
+            document.getElementById('colorBox').style.backgroundColor = 'red';
+        }
+
+        function resetColor() {
+            document.getElementById('colorBox').style.backgroundColor = 'blue';
+        }
+    </script>
+</head>
+<body>
+
+    <h1>DHTML Example: Color Change on Hover</h1>
+    <div id="colorBox" onmouseover="changeColor()" onmouseout="resetColor()"></div>
+
+</body>
+</html>

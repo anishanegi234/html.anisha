@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHTML Example 4: Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+        #gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .thumbnail {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.2s; /* Add a little animation */
+        }
+        .thumbnail:hover {
+            transform: scale(1.1); /* Scale up on hover */
+        }
+        #mainImage {
+            width: 300px;
+            height: 300px;
+            margin-top: 20px;
+            border: 2px solid #2980B9; /* Border around the main image */
+        }
+    </style>
+    <script>
+        function changeImage(imageSrc) {
+            // Get the main image element
+            var mainImage = document.getElementById('mainImage');
+            // Change the source of the main image to the clicked thumbnail's source
+            mainImage.src = imageSrc;
+        }
+    </script>
+</head>
+<body>
+    <h1>DHTML Example 4: Image Gallery</h1>
+    <img id="mainImage" src="https://via.placeholder.com/300" alt="Main Image">
+    
+    <div id="gallery">
+        <img class="thumbnail" src="https://via.placeholder.com/100" alt="Image 1" onclick="changeImage('https://via.placeholder.com/300')">
+        <img class="thumbnail" src="https://via.placeholder.com/101" alt="Image 2" onclick="changeImage('https://via.placeholder.com/301')">
+        <img class="thumbnail" src="https://via.placeholder.com/102" alt="Image 3" onclick="changeImage('https://via.placeholder.com/302')">
+        <img class="thumbnail" src="https://via.placeholder.com/103" alt="Image 4" onclick="changeImage('https://via.placeholder.com/303')">
+    </div>
+</body>
+</html>

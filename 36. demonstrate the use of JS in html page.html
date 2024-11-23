@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        // JavaScript function to be called on button click
+        function showMessage() {
+            // Display an alert message
+            alert("Hello! This is a JavaScript alert.");
+            // Update the paragraph content
+            document.getElementById("message").innerText = "You clicked the button!";
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript Example</h1>
+    <p id="message">Click the button below to see a JavaScript action!</p>
+    <button onclick="showMessage()">Click Me!</button>
+</body>
+</html>

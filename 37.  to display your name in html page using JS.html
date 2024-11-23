@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Name with JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        #nameDisplay {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+    <script>
+        // JavaScript function to display your name
+        function displayName() {
+            // Replace 'Your Name' with your actual name
+            document.getElementById("nameDisplay").innerText = "Kavita Basera"; 
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to My Webpage</h1>
+    <p>Click the button to display my name:</p>
+    <button onclick="displayName()">Show Name</button>
+    <p id="nameDisplay"></p> <!-- Empty paragraph to display the name -->
+</body>
+</html>
